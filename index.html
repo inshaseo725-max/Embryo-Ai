@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Embryo-AI | Future-Proofing Your Workforce</title>
+<link href="https://fonts.googleapis.com" rel="stylesheet">
+<style>
+:root {
+    --primary: #00d2ff;
+    --secondary: #3a7bd5;
+    --glass: rgba(255, 255, 255, 0.05);
+    --bg: #030a16;
+}
+* { margin:0; padding:0; box-sizing:border-box; font-family:'Montserrat',sans-serif; scroll-behavior:smooth; }
+body { background-color: var(--bg); color:white; overflow-x:hidden; }
+
+#bg-canvas { position: fixed; top:0; left:0; z-index:-1; width:100%; height:100%; opacity:0.3; }
+
+.glass-card {
+    background: var(--glass);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow:0 0 25px rgba(0,210,255,0.1);
+    margin-bottom: 40px;
+    transition:0.3s;
+}
+.glass-card:hover { border-color: var(--primary); box-shadow:0 0 30px rgba(0,210,255,0.3); }
+
+header { text-align:center; padding:100px 20px 60px; }
+h1 { font-size:3rem; font-weight:900; line-height:1.2; background:linear-gradient(to right,#fff,var(--primary)); -webkit-background-clip:text; -webkit-text-fill-color:transparent; margin-bottom:20px; }
+.hero-sub { color:#d1d1d1; max-width:700px; margin:0 auto 30px; font-size:1.1rem; }
+
+.video-wrapper { max-width:850px; margin:0 auto; border-radius:20px; border:2px solid var(--primary); overflow:hidden; box-shadow:0 0 40px rgba(0,210,255,0.4); animation: float 4s ease-in-out infinite; }
+video { width:100%; display:block; border-radius:20px; }
+
+@keyframes float { 0%,100%{transform:translateY(0);} 50%{transform:translateY(-10px);} }
+
+.container { max-width:900px; margin:0 auto; padding:20px; }
+h2 { font-size:2rem; color: var(--primary); margin-bottom:15px; text-transform:uppercase; }
+p { color:#d1d1d1; line-height:1.8; margin-bottom:20px; }
+
+.form-field { display:flex; flex-direction:column; gap:15px; }
+input, textarea { background: rgba(0,0,0,0.4); border:1px solid rgba(0,210,255,0.3); padding:15px; border-radius:10px; color:white; outline:none; transition:0.3s; }
+input:focus, textarea:focus { border-color: var(--primary); box-shadow:0 0 10px var(--primary); }
+
+.btn { background: linear-gradient(45deg, var(--secondary), var(--primary)); color:white; padding:18px 35px; border:none; border-radius:50px; font-weight:bold; cursor:pointer; text-decoration:none; display:inline-block; transition:0.3s; text-align:center; }
+.btn:hover { box-shadow:0 0 30px var(--primary); transform:scale(1.05); }
+
+@media (max-width:768px) { h1 { font-size:2rem; } .glass-card { padding:20px; } }
+</style>
+</head>
+<body onload="welcomeSparkles()">
+
+<canvas id="bg-canvas"></canvas>
+
+<header>
+<h1>AI-POWERED RECRUITMENT <br>THAT FINDS HIDDEN TALENT</h1>
+<p class="hero-sub">We don’t just find candidates who are looking for jobs—we identify top-tier professionals already excelling in their roles.</p>
+
+<div class="video-wrapper">
+    <video id="promoVideo" loop>
+        <source src="Ad.mp4.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <div style="margin-top:15px; text-align:center;">
+        <button class="btn" id="playPauseBtn">Play</button>
+        <button class="btn" id="muteUnmuteBtn">Mute</button>
+    </div>
+</div>
+</header>
+
+<div class="container">
+<div class="glass-card">
+<h2>Are You Settling for "Available" Instead of "Best"?</h2>
+<p>Most recruitment agencies only focus on the 30% of candidates actively searching on job boards. They miss the top 70% of high-performers who are already successfully employed but open to the right move. Stop hiring from the bottom of the pile.</p>
+</div>
+
+<div class="glass-card">
+<h2>The Embryo-AI Advantage</h2>
+<p>Our advanced AI technology goes beyond keywords. We map out the entire market to find professionals whose skills and growth potential perfectly align with your specifications. We bring the "Passive Talent" directly to your doorstep.</p>
+</div>
+
+<div class="glass-card">
+<h2>Why Choose Embryo-AI?</h2>
+<p>
+✔️ <strong>AI-Powered Matching:</strong> Scientific precision.<br>
+✔️ <strong>Access to Hidden Talent:</strong> Reach the elite 70%.<br>
+✔️ <strong>70% Faster Hiring:</strong> Scale your team instantly.<br>
+✔️ <strong>Elite Candidates:</strong> We bring you game-changers.
+</p>
+</div>
+
+<div class="glass-card" id="contact">
+<h2>Request a Consultation</h2>
+<form action="https://formspree.io/f/xeelywgo" method="POST" id="leadForm" class="form-field">
+<input type="text" name="name" placeholder="Full Name" required>
+<input type="email" name="email" placeholder="Your Work Email" required>
+<input type="text" name="company" placeholder="Company Name" required>
+<textarea name="needs" rows="4" placeholder="Briefly describe your hiring needs..."></textarea>
+<button type="submit" class="btn">Send My Request</button>
+</form>
+</div>
+
+<!-- Inline Calendly Embed Section -->
+<section id="calendar" style="padding:40px 0; text-align:center;">
+<div class="glass-card">
+<h2>Book Your Consultation Call</h2>
+<p>Select a convenient time below to discuss how Embryo-AI can transform your recruitment process.</p>
+
+<div class="calendly-inline-widget" 
+     data-url="https://calendly.com/inshaseo725/30min" 
+     style="min-width:320px; height:700px; margin:0 auto;">
+</div>
+
+<p style="margin-top:25px; color:#666; font-size:0.8rem;">*Meeting will be conducted via Zoom or Google Meet.</p>
+</div>
+</section>
+
+</div>
+
+<footer style="text-align:center; padding:50px; color:#555;">
+Embryo-AI &copy; 2026. Future-proofing your workforce.
+</footer>
+
+<script src="https://assets.calendly.com/assets/external/widget.js"></script>
+<script>
+// Sparkles
+function welcomeSparkles() {
+    if (typeof confetti==='function') { confetti({ particleCount:150, spread:70, origin:{y:0.6}, colors:['#00d2ff','#ffffff'] }); }
+}
+document.getElementById('leadForm').addEventListener('submit', function(){
+    if(typeof confetti==='function'){ confetti({ particleCount:300, spread:100, origin:{y:0.8} }); }
+});
+
+// Video Controls
+const video = document.getElementById('promoVideo');
+const playBtn = document.getElementById('playPauseBtn');
+const muteBtn = document.getElementById('muteUnmuteBtn');
+
+playBtn.addEventListener('click', ()=>{
+    if(video.paused){ video.play(); playBtn.textContent='Pause'; }
+    else{ video.pause(); playBtn.textContent='Play'; }
+});
+muteBtn.addEventListener('click', ()=>{
+    video.muted = !video.muted;
+    muteBtn.textContent = video.muted ? 'Unmute' : 'Mute';
+});
+
+// Background particles
+const canvas = document.getElementById('bg-canvas');
+const ctx = canvas.getContext('2d');
+canvas.width = window.innerWidth; canvas.height = window.innerHeight;
+let pArray = [];
+for(let i=0;i<60;i++){ pArray.push({x:Math.random()*canvas.width,y:Math.random()*canvas.height,s:Math.random()*1.5}); }
+function draw(){ ctx.clearRect(0,0,canvas.width,canvas.height); ctx.fillStyle="#00d2ff"; pArray.forEach(p=>{ ctx.beginPath(); ctx.arc(p.x,p.y,p.s,0,Math.PI*2); ctx.fill(); p.y-=0.3; if(p.y<0)p.y=canvas.height; }); requestAnimationFrame(draw); }
+draw();
+</script>
+</body>
+</html>
