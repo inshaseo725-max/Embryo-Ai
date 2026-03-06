@@ -26,7 +26,7 @@ Ad → Landing Page → Lead Form → Email Notification → Calendar Booking
 
 ## Live Website
 
-https://inshaseo725-max.github.io/embryo-Ai
+https://inshaseo725-max.github.io/Embryo-Ai/
 
 ## Author
 
