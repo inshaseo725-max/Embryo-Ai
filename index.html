@@ -107,7 +107,7 @@ input:focus, textarea:focus { border-color: var(--primary); box-shadow:0 0 10px 
 <div class="glass-card" id="contact">
 <h2>Request a Consultation</h2>
 <form action="https://formspree.io/f/xeelywgo" method="POST" id="leadForm" class="form-field">
-<input type="hidden" name="_redirect" value="https://inshaseo725-max.github.io/Embryo-Ai/thankyou.html">
+
 <input type="text" name="name" placeholder="Full Name" required>
 
 <input type="email" name="email" placeholder="Work Email" required>
@@ -121,6 +121,11 @@ input:focus, textarea:focus { border-color: var(--primary); box-shadow:0 0 10px 
 <textarea name="needs" rows="4" placeholder="Briefly describe your hiring needs"></textarea>
 <button type="submit" class="btn">Send My Request</button>
 </form>
+</div>
+    <div id="thankyouSection" style="display:none; text-align:center; padding:50px;">
+  <h2>Thank You!</h2>
+  <p>Your request has been received. We will contact you shortly.</p>
+  <button class="btn" onclick="closeThankYou()">Back to form</button>
 </div>
 
 <!-- Inline Calendly Embed Section -->
